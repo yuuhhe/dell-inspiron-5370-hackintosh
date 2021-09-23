@@ -1,4 +1,4 @@
-# OpenCore 0.7.2 - Dell Inspiron 5370 i5-8250U
+# OpenCore 0.7.3 - Dell Inspiron 5370 i5-8250U
 
 ![About this Mac](.assets/images/README.md/about_this_mac.png)
 
@@ -11,11 +11,13 @@
 | **Storage**    | `Western Digital SN750 Black NVMe 512GB`  |
 | **Audio Code** | `Realtek ALC295 (ALC3254)`                |
 | **WiFi Card**  | `BCM943602BAED aka DW1830`                |
-| **OS**         | `macOS Big Sur 11.5.1 (20G80)`            |
+| **OS**         | `macOS Big Sur 11.6 (20G165)`             |
 | **BIOS**       | `v1.18`                                   |
 
 
 ### Working/Not working:
+
+###### Click on the arrow icons to expand the spoilers
 <details>
 <summary>iGPU</summary>
   
