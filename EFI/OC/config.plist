@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enables USB Power Management</string>
+				<string>AppleUsbPower compatibility table</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -24,7 +24,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Paired with SSDT-TPD0 enables trackpad</string>
+				<string>Enable I2C Trackpad - SSDT-TPD0 companion</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -32,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Paired with SSDT-UPRW.aml needed for fixing sleep problems</string>
+				<string>Fix sleep problems - SSDT-UPRW companion</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -40,7 +40,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Custom SSDT for disabling HPET</string>
+				<string>Disable HPET device</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -48,7 +48,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enables SmBus support</string>
+				<string>SMBus compatibility table</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -56,7 +56,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Enable CPU Power Management</string>
+				<string>XCPM power management compatibility table</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -72,7 +72,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disables some keystrokes</string>
+				<string>Custom keyboard mapping</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -80,7 +80,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Paired with SSDT-GPI0 enables trackpad</string>
+				<string>Enable I2C Trackpad - SSDT-GPI0 companion</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -232,6 +232,12 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AADAhw==</data>
+				<key>backlight-smoother-interval</key>
+				<data>BwAAAA==</data>
+				<key>backlight-smoother-steps</key>
+				<data>IwAAAA==</data>
+				<key>backlight-smoother-threshold</key>
+				<data>LAEAAA==</data>
 				<key>device-id</key>
 				<data>FlkAAA==</data>
 				<key>enable-backlight-smoother</key>
@@ -833,7 +839,7 @@
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
-			<string>Default</string>
+			<string>j185</string>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -845,13 +851,13 @@
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string>ControlMsrE2.efi</string>
+				<string>Interactive MsrE2 controller for unlocking CFG Lock</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
 				<key>Name</key>
-				<string>ControlMsrE2.efi</string>
+				<string>ControlMsrE2 - Interactive MsrE2 Controller</string>
 				<key>Path</key>
 				<string>ControlMsrE2.efi</string>
 				<key>RealPath</key>
@@ -865,13 +871,13 @@
 				<key>Auxiliary</key>
 				<true/>
 				<key>Comment</key>
-				<string>modGRUBShell.efi</string>
+				<string>Launch a modified version of GRUB with additional features on hidden BIOS settings</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Flavour</key>
 				<string>Auto</string>
 				<key>Name</key>
-				<string>modGRUBShell.efi</string>
+				<string>modGRUBShell - Custom GrubShell for setup_var</string>
 				<key>Path</key>
 				<string>modGRUBShell.efi</string>
 				<key>RealPath</key>
@@ -886,10 +892,10 @@
 				<true/>
 				<key>Comment</key>
 				<string>OpenShell.efi</string>
-				<key>Flavour</key>
-				<string>Auto</string>
 				<key>Enabled</key>
 				<true/>
+				<key>Flavour</key>
+				<string>Auto</string>
 				<key>Name</key>
 				<string>OpenShell.efi</string>
 				<key>Path</key>
@@ -909,8 +915,6 @@
 			<dict>
 				<key>DefaultBackgroundColor</key>
 				<data>AAAAAA==</data>
-				<key>UIScale</key>
-				<data>AQ==</data>
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
@@ -933,7 +937,6 @@
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<array>
 				<string>DefaultBackgroundColor</string>
-				<string>UIScale</string>
 			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
@@ -1119,6 +1122,8 @@
 			<false/>
 			<key>ProvideConsoleGop</key>
 			<true/>
+			<key>ReconnectGraphicsOnConnect</key>
+			<false/>
 			<key>ReconnectOnResChange</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
@@ -1129,6 +1134,8 @@
 			<false/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
+			<key>UIScale</key>
+			<integer>0</integer>
 			<key>UgaPassThrough</key>
 			<false/>
 		</dict>
@@ -1179,6 +1186,8 @@
 			<false/>
 			<key>EnableVectorAcceleration</key>
 			<true/>
+			<key>EnableVmx</key>
+			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>ForceOcWriteFlash</key>
